@@ -38,11 +38,20 @@ public class UserReg
 	
 	public static void mobile() {
 		System.out.println("Enter Mobile Number With Country Code(space between code and number)");
-		Strin mob = scanner.nextLine()
-		if (Pattern.matches("^[1-9]{2}\s{1}[1-9]{1}[0-9]{9}$", m) == true)
-			System.out.println("Valid Mobile");
+		String mobile = scanner.nextLine();
+		if (Pattern.matches("^[1-9]{2}\s{1}[1-9]{1}[0-9]{9}$",mobile))
+			System.out.println("Valid Mobile no."+mobile);
 		else
 			System.out.println("Invalid Mobile");
+	}
+	
+	public static void password() {
+		System.out.println("Enter password");
+		String pass = scanner.nextLine();
+		if (Pattern.matches("^[A-Za-z0-9]{8,}", pass))
+			System.out.println("Is a valid password"+pass);
+		else
+			System.out.println("Invalid Password");
 	}
 	public static void main(String[] args) {	
 		first();
