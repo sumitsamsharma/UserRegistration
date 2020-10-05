@@ -33,7 +33,7 @@ public class UserReg
 		if (Pattern.matches("^[_A-Za-z0-9-+&*-]+(\\.[_A-Za-z0-9-]+)*@"+"[A-Za-z0-9-+&*-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2})$",email))
 			System.out.println("it is valid e-mail");
 		else
-			System.out.println("it is not a valid email");		
+			System.out.println("it is not valid email");		
 	}
 	
 	public static void mobile() {
