@@ -30,7 +30,7 @@ public class UserReg
 	{
 		System.out.println("Enter email");
 		String email = scanner.nextLine();
-		if (Pattern.matches("^[_A-Za-z0-9-+&*-a]+(\\.[_A-Za-z0-9-]+)*@"+"[A-Za-z0-9-+&*-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2})$",email))
+		if (Pattern.matches("^[_A-Za-z0-9-+&*-]+(\\.[_A-Za-z0-9-]+)*@"+"[A-Za-z0-9-+&*-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2})$",email))
 			System.out.println("it is valid e-mail");
 		else
 			System.out.println("it is not a valid email");		
@@ -48,7 +48,7 @@ public class UserReg
 	public static void password() {
 		System.out.println("Enter password");
 		String pass = scanner.nextLine();
-		if (Pattern.matches("^(?=.*\\d)" + "(?=.*[a-z])(?=.*[A-Z]){8,}$",pass))
+		if (Pattern.matches("^(?=.*\\d)" + "(?=.*[a-z])(?=.*[A-Z])" + "(?=.*[#@%$^=+&])" + "(?=\\S+$).{8,}$",pass))
 			System.out.println("Valid Password");
 		else
 			System.out.println("Invalid Password");
@@ -57,6 +57,8 @@ public class UserReg
 		first();
 		last();
 		email();
+		mobile();
+		password();
 	}
 }
 
