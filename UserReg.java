@@ -33,7 +33,16 @@ public class UserReg
 		if (Pattern.matches("^[_A-Za-z0-9-+&*-a]+(\\.[_A-Za-z0-9-]+)*@"+"[A-Za-z0-9-+&*-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2})$",email))
 			System.out.println("it is valid e-mail");
 		else
-			System.out.println("it is not a valid email");	
+			System.out.println("it is not a valid email");		
+	}
+	
+	public static void mobile() {
+		System.out.println("Enter Mobile Number With Country Code(space between code and number)");
+		Strin mob = scanner.nextLine()
+		if (Pattern.matches("^[1-9]{2}\s{1}[1-9]{1}[0-9]{9}$", m) == true)
+			System.out.println("Valid Mobile");
+		else
+			System.out.println("Invalid Mobile");
 	}
 	public static void main(String[] args) {	
 		first();
