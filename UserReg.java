@@ -48,8 +48,8 @@ public class UserReg
 	public static void password() {
 		System.out.println("Enter password");
 		String pass = scanner.nextLine();
-		if (Pattern.matches("^[A-Za-z0-9]{8,}", pass))
-			System.out.println("Is a valid password"+pass);
+		if (Pattern.matches("^(?=.*\\d)" + "(?=.*[a-z])(?=.*[A-Z])$",pass))
+			System.out.println("Valid Password");
 		else
 			System.out.println("Invalid Password");
 	}
