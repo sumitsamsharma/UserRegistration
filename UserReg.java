@@ -37,7 +37,7 @@ public class UserReg
 	}
 	
 	public static void mobile() {
-		System.out.println("Enter Mobile Number With Country Code(space between code and number)");
+		System.out.println("Enter Mobile no. with country code(give space between the country code and no)");
 		Strin mob = scanner.nextLine()
 		if (Pattern.matches("^[1-9]{2}\s{1}[1-9]{1}[0-9]{9}$", m) == true)
 			System.out.println("Valid Mobile");
